@@ -7,7 +7,7 @@
 
         
        <!-- with renderer -->
-        <p [ getstyle]="'pink'" appAdvanceCsshighlitghter>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quos, ab nobis molestias cum aut explicabo saepe velit dolor dolore ut suscipit omnis delectus! Modi aliquam nobis nesciunt hic id.</p>  
+        <p  appAdvanceCsshighlitghter   [defaultColor]="'yellowgreen'" [hovercolor]="'black'">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Non quos, ab nobis molestias cum aut explicabo saepe velit dolor dolore ut suscipit omnis delectus! Modi aliquam nobis nesciunt hic id.</p>  
      
         
 
@@ -20,6 +20,35 @@
        <input  appCreditCard type="text" class="form-control">
 
       </div>
+  </div>
+
+
+ 
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card">
+    <div class="card-header">
+         <h2 class="alert alert-info">Predifine-pipe-task</h2>
+    </div>
+    <div class="card-body">
+       <p>{{courseInfo.fees| currency: 'INR'}}</p> 
+      <p>{{courseInfo.students | number}}</p>
+
+       <p>{{courseInfo.rating | number: '1.2-2'}}</p>
+
+       <p>{{courseInfo.startDate | date: 'short'}}</p>
+
+       <p>{{courseInfo.startDate| date : 'long'}}</p>
+
+       <p>{{courseInfo.startDate | date: 'medium'}}</p>
+
+
+       <p>{{courseInfo.startDate | date : 'longDate}}</p>
+
+    
+    </div>
+</div>
+    </div>
   </div>
 
   <div class="row">
