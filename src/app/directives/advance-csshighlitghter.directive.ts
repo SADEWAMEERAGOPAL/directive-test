@@ -12,8 +12,7 @@ export class AdvanceCsshighlitghterDirective implements OnInit {
   @HostBinding('style.backgroundColor')
     bgColor: string= this.defaultColor
 
- @Input() getstyle: string='yellow'
-  @Input() getclass: string='alert-info'
+
   constructor(private _eleRef: ElementRef,
     private _rendere: Renderer2
   ) { }
@@ -24,7 +23,7 @@ export class AdvanceCsshighlitghterDirective implements OnInit {
  
   }
 
-  @HostListener('mouseHover')
+  @HostListener('mouseover')
   OnSearch(){
     this._rendere.setStyle(this._eleRef.nativeElement, 'background-color', 'pink')
   }

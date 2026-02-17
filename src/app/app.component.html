@@ -24,68 +24,7 @@
 
 
  
-  <div class="row">
-    <div class="col-md-4">
-      <div class="card">
-    <div class="card-header">
-         <h2 class="alert alert-info">Predifine-pipe-task</h2>
-    </div>
-    <div class="card-body">
-       <p>{{courseInfo.fees| currency: 'INR'}}</p> 
-      <p>{{courseInfo.students | number}}</p>
+ 
 
-       <p>{{courseInfo.rating | number: '1.2-2'}}</p>
-
-       <p>{{courseInfo.startDate | date: 'short'}}</p>
-
-       <p>{{courseInfo.startDate| date : 'long'}}</p>
-
-       <p>{{courseInfo.startDate | date: 'medium'}}</p>
-
-
-       <p>{{courseInfo.startDate | date : 'longDate}}</p>
-
-    
-    </div>
-</div>
-    </div>
-  </div>
-
-  <div class="row">
-       <div class="m-5">
-         <strong>summary pipe for letter</strong>
-        <p class="alert alert-info">{{title1|summaryPipe: 10 }} </p> 
-
-        <strong>summary pipe for word</strong>
-        <p class="alert alert-primary">{{title1|summarypipeword:30}}</p>
-       </div>
-
-      <div class="col-md-8">
-         <input [(ngModel)]="serchPlayers" type="text" class="form-control">
-        <strong>Filter Pipe</strong>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>sr no</th>
-              <th>name</th>
-              <th>team</th>
-              <th>age</th>
-              <th>role</th>
-              <th>matches</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr *ngFor="let p of playesraArr| filterPipe: serchPlayers; let i=index">
-              <td>{{i+1}}</td>
-              <td>{{p.name}}</td>
-              <td>{{p.team}}</td>
-              <td>{{p.age}}</td>
-              <td>{{p.role}}</td>
-              <td>{{p.matches}}</td>
-            </tr>
-          </tbody>
-        </table>
-    </div>
-  </div>
+  
 </div>
